@@ -1,0 +1,12 @@
+{
+  "name": "urlproducer",
+  "version": "1.0.0",
+  "description": "This server will write long urls to database and will return a number in exchange. This server will write to a rabbitMQ queue. That queue will be served by a mongodb server.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon ./index.js --exec babel-node -e js"
+  },
+  "author": "Utsav Jain",
+  "license": "ISC"
+}
