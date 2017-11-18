@@ -23,20 +23,12 @@ app.route('/:short').get((req, res) => {
 			res.send(`Mongo GET me fat raha hai ${err}`);
 		}
 		if(somelongUrl != null){
-			let updatedurl = somelongUrl;
-			updatedurl.hits+=1;
-			UrlModel.findOneAndUpdate({_id:somelongUrl._id}, updatedurl, {new:true}, (err, updatedurl) => {
-				if(err){
-					res.send(`Update me fat rahi rai!`);
-				}	
-				console.log(`Updated URL IS ${updatedurl}`);		
-			})
 			res.redirect(somelongUrl.urllink)
 		}
 		
 	})
 })
 
-app.listen(PORT, function(){
+app.listen(3007, function(){
 	console.log(`server listening on port ${PORT} Jai Bhavani !Ganpati bappa moriya`)
 })
